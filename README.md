@@ -83,9 +83,26 @@ freelancer may submit a new deliverable and request a fresh ruling.
 <!-- DEMO-PROOF:BEGIN -->
 - Contract: `escrow_court.py`
 - Network: GenLayer Studio (Studionet)
-- Contract address: _to be filled after deployment_
-- Deploy tx: _to be filled after deployment_
-- Demo case: _to be filled after the live run_
+- Deployed from (owner): `0x0d1e8B737614bCb563A4BaB329bC257D200B42B4`
+- Contract address: `0xbefA8F8F52d506baB4bAE6816aCdBCEbC9be78B0`
+  ([explorer](https://explorer-studio.genlayer.com/address/0xbefA8F8F52d506baB4bAE6816aCdBCEbC9be78B0))
+- Deploy tx: `0x3b75e3f3e119a45c5b55c8196fe6f27ca5b1d9db102597a8b296f9572e102a79` — FINALIZED, 2026-11-25
+
+Demo case `case-1` — "Demo job: GenLayer price-oracle repository"
+(client `0x0d1e…42B4`, freelancer `0x8590e584E02D17D22B58D2f54f6E13f8089934eb`,
+x402 terms: 100 USDC, scheme `exact`, network `base-sepolia`):
+
+| Step | Tx | Result |
+| --- | --- | --- |
+| `open_case` | `0x702a28b932f11e390736fa8fce5a48db84479c72b2cd22e8d0a7c3c93b47c92c` | FINALIZED, case id `case-1` |
+| `submit_deliverable` (evidence: https://github.com/Yanasari/hargapangan) | `0x6fae30440ed2a1a475edb6adf885846326ad4847ea7da24944c0c0265411ae2a` | FINALIZED |
+| `request_ruling` | `0x2d3895a304a28a2931ebdc7a59885cfd6d1b36b266de4e79fd1db32e17aceb1a` | FINALIZED — ruling **PAY_FREELANCER** |
+| `record_settlement` (`demo-settlement-001`) | `0xb7407b3a56d30708ed31bd70e8002bbf05bc9c83e1a72c1db533d0dc95a9a945` | FINALIZED — case **CLOSED** |
+
+Ruling evidence recorded on-chain: *"The evidence page shows a public
+GitHub repository containing 'harga_pangan.py' (source file) and
+'README.md' which explains the contract's purpose, how it works, the
+API, and deployment details."*
 <!-- DEMO-PROOF:END -->
 
 Demo flow shown in the walkthrough video: open a case for a real
